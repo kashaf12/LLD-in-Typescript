@@ -2,6 +2,95 @@
 
 A command-line implementation of the classic Tic-Tac-Toe game built with TypeScript using object-oriented programming principles and design patterns.
 
+## Diagram
+
+```mermaid
+classDiagram
+    class Game {
+    -gameBoard: Board
+    -players: Player[]
+    -winningStrategy: WinningStrategyI
+    -currentPlayerIndex: number
+    -static rl: ReadLine
+    +constructor(players: Player[], size: number, winningStrategy: WinningStrategyI)
+    +startGame(): Promise~void~
+    +static getMoveFromUser(): Promise<~x: number, y: number~>
+    +getPlayers(): Player[]
+    +getBoardSize(): number
+    }
+
+    class Board {
+        -size: number
+        -board: (Cell | null)[][]
+        +constructor(size: number)
+        +getSize(): number
+        +printBoard(): void
+        +makeMove(player: Player, x: number, y: number): boolean
+        +hasEmptyCells(): boolean
+        +getBoard(): (Cell | null)[][]
+    }
+
+    class Player {
+        -name: string
+        -cell: Cell
+        +constructor(name: string, cell: Cell)
+        +getName(): string
+        +getCell(): Cell
+    }
+
+    class Cell {
+        <<abstract>>
+        -cellType: CellType
+        +constructor(cellType: CellType)
+        +getCellType(): CellType
+    }
+
+    class CellX {
+        +constructor()
+    }
+
+    class CellY {
+        +constructor()
+    }
+
+    class CellType {
+        X:"X",
+        Y:"Y"
+    }
+
+    class CellFactory {
+        <<static>>
+        +createCell(type: CellType): Cell
+        +createCellFromSymbol(symbol: string): Cell
+    }
+
+    class WinningStrategyI {
+        +checkWinner(player: Player): boolean
+        +setBoard(board: Board): void
+    }
+
+    class BasicStrategy {
+        -board: Board | null
+        +setBoard(board: Board): void
+        +checkWinner(player: Player): boolean
+    }
+
+    Game --> Board : has
+    Game --> Player : has
+    Game --> WinningStrategyI : uses
+    Player --> Cell : has
+    Board ..> Player : uses
+    Board o-- "0..*" Cell : contains
+    WinningStrategyI <|.. BasicStrategy : implements
+    BasicStrategy --> Board : references
+    Cell <|-- CellX : extends
+    Cell <|-- CellY : extends
+    Cell --> CellType : uses
+    CellFactory ..> Cell : creates
+    CellFactory ..> CellX : creates
+    CellFactory ..> CellY : creates
+```
+
 ## 🎮 Features
 
 - Classic 3x3 Tic-Tac-Toe gameplay
@@ -135,92 +224,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## Diagram
-
-```mermaid
-classDiagram
-    class Game {
-    -gameBoard: Board
-    -players: Player[]
-    -winningStrategy: WinningStrategyI
-    -currentPlayerIndex: number
-    -static rl: ReadLine
-    +constructor(players: Player[], size: number, winningStrategy: WinningStrategyI)
-    +startGame(): Promise~void~
-    +static getMoveFromUser(): Promise<~x: number, y: number~>
-    +getPlayers(): Player[]
-    +getBoardSize(): number
-    }
-
-    class Board {
-        -size: number
-        -board: (Cell | null)[][]
-        +constructor(size: number)
-        +getSize(): number
-        +printBoard(): void
-        +makeMove(player: Player, x: number, y: number): boolean
-        +hasEmptyCells(): boolean
-        +getBoard(): (Cell | null)[][]
-    }
-
-    class Player {
-        -name: string
-        -cell: Cell
-        +constructor(name: string, cell: Cell)
-        +getName(): string
-        +getCell(): Cell
-    }
-
-    class Cell {
-        <<abstract>>
-        -cellType: CellType
-        +constructor(cellType: CellType)
-        +getCellType(): CellType
-    }
-
-    class CellX {
-        +constructor()
-    }
-
-    class CellY {
-        +constructor()
-    }
-
-    class CellType {
-        X:"X",
-        Y:"Y"
-    }
-
-    class CellFactory {
-        <<static>>
-        +createCell(type: CellType): Cell
-        +createCellFromSymbol(symbol: string): Cell
-    }
-
-    class WinningStrategyI {
-        +checkWinner(player: Player): boolean
-        +setBoard(board: Board): void
-    }
-
-    class BasicStrategy {
-        -board: Board | null
-        +setBoard(board: Board): void
-        +checkWinner(player: Player): boolean
-    }
-
-    Game --> Board : has
-    Game --> Player : has
-    Game --> WinningStrategyI : uses
-    Player --> Cell : has
-    Board ..> Player : uses
-    Board o-- "0..*" Cell : contains
-    WinningStrategyI <|.. BasicStrategy : implements
-    BasicStrategy --> Board : references
-    Cell <|-- CellX : extends
-    Cell <|-- CellY : extends
-    Cell --> CellType : uses
-    CellFactory ..> Cell : creates
-    CellFactory ..> CellX : creates
-    CellFactory ..> CellY : creates
-```
