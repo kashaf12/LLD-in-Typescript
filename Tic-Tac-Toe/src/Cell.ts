@@ -3,7 +3,7 @@ export enum CellType {
   Y = "Y",
 }
 
-export abstract class Cell {
+export class Cell {
   private cellType: CellType;
 
   constructor(cellType: CellType) {

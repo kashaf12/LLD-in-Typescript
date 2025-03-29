@@ -1,12 +1,12 @@
-import { CellX } from "../src/CellX";
-import { CellY } from "../src/CellY";
+import { CellType } from "../src/Cell";
+import { CellFactory } from "../src/CellFactory";
 import { Game } from "../src/Game";
 import { Player } from "../src/Player";
 
 describe("Game", () => {
   it("should create a game with players and board size", () => {
-    const cellX = new CellX();
-    const cellY = new CellY();
+    const cellX = CellFactory.createCell(CellType.X);
+    const cellY = CellFactory.createCell(CellType.Y);
 
     const player1 = new Player("Player 1", cellX);
     const player2 = new Player("Player 2", cellY);

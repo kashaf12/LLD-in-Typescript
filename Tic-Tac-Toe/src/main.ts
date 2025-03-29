@@ -1,7 +1,5 @@
 import { CellType } from "./Cell";
 import { CellFactory } from "./CellFactory";
-import { CellX } from "./CellX";
-import { CellY } from "./CellY";
 import { Game } from "./Game";
 import { Player } from "./Player";
 

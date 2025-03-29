@@ -2,6 +2,82 @@
 
 A command-line implementation of the classic Tic-Tac-Toe game built with TypeScript using object-oriented programming principles and design patterns.
 
+## 🎮 Features
+
+- Classic 3x3 Tic-Tac-Toe gameplay
+- Supports multiple players
+- Customizable board size
+- Extensible winning condition strategies
+- Clean object-oriented architecture
+
+## 📋 Requirements
+
+### Functional Requirements
+
+1. **Game Setup**
+
+   - System shall allow two players to participate in a game
+   - System shall assign unique symbols (X and Y) to each player
+   - System shall initialize an empty board of configurable size (default 3x3)
+
+2. **Gameplay**
+
+   - System shall allow players to take turns making moves
+   - System shall validate all move attempts and reject invalid moves
+   - System shall display the current state of the board after each move
+   - System shall alternate turns between players automatically
+
+3. **Win Conditions**
+
+   - System shall detect when a player has three of their symbols in a row horizontally
+   - System shall detect when a player has three of their symbols in a row vertically
+   - System shall detect when a player has three of their symbols in a row diagonally
+   - System shall declare the appropriate player as winner when win conditions are met
+
+4. **Game End**
+   - System shall detect when the game board is full (draw condition)
+   - System shall end the game when a win condition is met or draw is detected
+   - System shall announce the game result (winner or draw)
+
+### Non-Functional Requirements
+
+1. **Usability**
+
+   - The game shall provide clear prompts for user input
+   - The game shall clearly display the board state in a readable format
+
+2. **Extensibility**
+
+   - The system shall be designed to allow future addition of new cell types
+   - The system shall support custom winning condition strategies
+   - The system shall be able to adapt to different board sizes
+
+3. **Maintainability**
+
+   - The codebase shall follow SOLID principles
+   - The codebase shall implement appropriate design patterns
+   - All components shall have clearly defined responsibilities
+
+4. **Reliability**
+   - The system shall handle invalid inputs gracefully without crashing
+   - The system shall maintain game state consistency throughout gameplay
+
+## 🏗️ Architecture
+
+This implementation follows SOLID principles and incorporates several design patterns:
+
+- **Factory Method Pattern**: Used for cell creation through `CellFactory`
+- **Strategy Pattern**: Applied for winning condition checks with `WinningStrategyI` interface
+- **Inheritance**: Cell hierarchy with abstract base class and concrete implementations
+
+### Class Structure
+
+- `Game`: Main controller that orchestrates game flow
+- `Board`: Represents the game board and manages moves
+- `Player`: Represents a player with name and cell type
+- `Cell`: Abstract base class for different cell types (X and Y)
+- `WinningStrategyI`: Strategy interface for checking win conditions
+
 ## Diagram
 
 ```mermaid
@@ -45,14 +121,6 @@ classDiagram
         +getCellType(): CellType
     }
 
-    class CellX {
-        +constructor()
-    }
-
-    class CellY {
-        +constructor()
-    }
-
     class CellType {
         X:"X",
         Y:"Y"
@@ -83,37 +151,9 @@ classDiagram
     Board o-- "0..*" Cell : contains
     WinningStrategyI <|.. BasicStrategy : implements
     BasicStrategy --> Board : references
-    Cell <|-- CellX : extends
-    Cell <|-- CellY : extends
     Cell --> CellType : uses
     CellFactory ..> Cell : creates
-    CellFactory ..> CellX : creates
-    CellFactory ..> CellY : creates
 ```
-
-## 🎮 Features
-
-- Classic 3x3 Tic-Tac-Toe gameplay
-- Supports multiple players
-- Customizable board size
-- Extensible winning condition strategies
-- Clean object-oriented architecture
-
-## 🏗️ Architecture
-
-This implementation follows SOLID principles and incorporates several design patterns:
-
-- **Factory Method Pattern**: Used for cell creation through `CellFactory`
-- **Strategy Pattern**: Applied for winning condition checks with `WinningStrategyI` interface
-- **Inheritance**: Cell hierarchy with abstract base class and concrete implementations
-
-### Class Structure
-
-- `Game`: Main controller that orchestrates game flow
-- `Board`: Represents the game board and manages moves
-- `Player`: Represents a player with name and cell type
-- `Cell`: Abstract base class for different cell types (X and Y)
-- `WinningStrategyI`: Strategy interface for checking win conditions
 
 ## 🛠️ Technology Stack
 
@@ -131,8 +171,8 @@ This implementation follows SOLID principles and incorporates several design pat
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kashaf12/LLD.git
-   cd Tic-Tac-Toe
+   git clone https://github.com/yourusername/tic-tac-toe.git
+   cd tic-tac-toe
    ```
 
 2. Install dependencies:
