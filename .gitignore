@@ -1,3 +1,5 @@
 repopack-output.txt
 node_modules
 dist
+.DS_Store
+*.log
