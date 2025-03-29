@@ -2,20 +2,7 @@
 
 This document outlines a my progress in learning LLD with typescript.
 
-## Projects Overview
-
-| Project              | Difficulty   | Focus Area                 |
-| -------------------- | ------------ | -------------------------- |
-| ✅ Tic-Tac-Toe       | Beginner     | Core OOP, Basic Patterns   |
-| Snake & Ladder       | Beginner     | State Management           |
-| Parking Lot          | Intermediate | Resource Allocation        |
-| Movie Ticket Booking | Intermediate | Concurrency, Transactions  |
-| Library Management   | Intermediate | Inventory Systems          |
-| Elevator System      | Advanced     | Scheduling Algorithms      |
-| Chess Game           | Advanced     | Complex Rules, AI          |
-| E-commerce Platform  | Expert       | Microservices, Scalability |
-
-## Detailed Project Checklists
+## Project Checklists
 
 ### ✅ Project 1: Tic-Tac-Toe (Completed)
 
@@ -24,26 +11,24 @@ This document outlines a my progress in learning LLD with typescript.
 - [x] Use Factory Method for cell creation
 - [x] Follow SOLID principles throughout implementation
 
-### Project 2: Snake & Ladder Game
+### ✅ Project 2: Snake & Ladder Game
 
-- [ ] **Core Game Mechanics**
+- [x] **Core Game Mechanics**
 
-  - [ ] Board representation with snakes and ladders
-  - [ ] Dice rolling mechanism
-  - [ ] Player movement logic
-  - [ ] Win condition detection
+  - [x] Board representation with snakes and ladders
+  - [x] Dice rolling mechanism
+  - [x] Player movement logic
+  - [x] Win condition detection
 
-- [ ] **Design Patterns to Implement**
+- [x] **Design Patterns to Implement**
 
-  - [ ] **State Pattern**: For managing player and game states
-  - [ ] **Command Pattern**: For move execution and potential undo functionality
-  - [ ] **Observer Pattern**: For notifying UI of game state changes
-  - [ ] **Singleton**: For game instance management
+  - [x] **Factory Pattern**: For creating tiles and obstacles
+  - [x] **Strategy Pattern**: For dice rolling implementation
+  - [ ] **Command Pattern**: All game actions are encapsulated as commands
+  - [ ] **Event-Driven Programming**: Game components communicate via events
 
-- [ ] **Technical Skills**
-  - [ ] Random number generation
-  - [ ] Event-driven programming
-  - [ ] Turn-based logic
+- [x] **Technical Skills**
+  - [x] Random number generation
 
 ### Project 3: Parking Lot System
 

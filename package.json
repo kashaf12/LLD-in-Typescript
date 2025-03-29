@@ -1,0 +1,31 @@
+{
+  "name": "lld",
+  "version": "1.0.0",
+  "description": "This document outlines a my progress in learning LLD with typescript.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.0",
+    "typescript": "^5.8.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "dist/"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "start:Tic-Tac-Toe": "node ./dist/Tic-Tac-Toe/src/main.js",
+    "start:Snake-Ladder": "node ./dist/Snake-Ladder/src/main.js",
+    "dev:Tic-Tac-Toe": "npm run build && npm run start:Tic-Tac-Toe",
+    "dev:Snake-Ladder": "npm run build && npm run start:Snake-Ladder",
+    "test-watch": "jest --watchAll --detectOpenHandles"
+  }
+}
