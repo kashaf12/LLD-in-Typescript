@@ -246,8 +246,6 @@ This document outlines a my progress in learning LLD with typescript.
 
 - Refactoring Guru: https://refactoring.guru/design-patterns
 - Source Making: https://sourcemaking.com/design_patterns
-- Baeldung Design Patterns: https://www.baeldung.com/design-patterns
-- Pattern Craft: https://patterncraft.com/
 
 ## Final Projects Showcase
 
