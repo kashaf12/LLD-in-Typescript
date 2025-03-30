@@ -1,6 +1,7 @@
 import { Board } from "./Board";
 import { NormalDice } from "./Dice";
 import { Game } from "./Game";
+import { GameController } from "./GameController";
 import { ObstacleFactory } from "./ObstacleFactory";
 import { Player } from "./Player";
 
@@ -13,13 +14,10 @@ function init() {
   const player1 = new Player("Player 1", board.getTile(1));
   const player2 = new Player("Player 2", board.getTile(1));
 
-  const game = new Game(board, [player1, player2]);
+  const game = new Game(board, [player1, player2], new NormalDice(6));
 
-  const dice = new NormalDice(6);
-
-  game.setDiceStrategy(dice);
-
-  game.play();
+  const controller = new GameController(game);
+  controller.startGame();
 }
 
 init();
