@@ -24,11 +24,12 @@ This document outlines a my progress in learning LLD with typescript.
 
   - [x] **Factory Pattern**: For creating tiles and obstacles
   - [x] **Strategy Pattern**: For dice rolling implementation
-  - [ ] **Command Pattern**: All game actions are encapsulated as commands
-  - [ ] **Event-Driven Programming**: Game components communicate via events
+  - [x] **Command Pattern**: All game actions are encapsulated as commands
+  - [x] **Event-Driven Programming**: Game components communicate via events
 
 - [x] **Technical Skills**
   - [x] Random number generation
+  - [x] Event Based Programming
 
 ### Project 3: Parking Lot System
 
