@@ -235,10 +235,8 @@ This document outlines a my progress in learning LLD with typescript.
 
 ## Final Projects Showcase
 
-As you complete each project, add links to your repositories here to showcase your work and track your progress:
-
 - [x] Tic-Tac-Toe
-- [ ] Snake & Ladder
+- [x] Snake & Ladder
 - [ ] Parking Lot
 - [ ] Movie Ticket Booking
 - [ ] Library Management

@@ -171,7 +171,7 @@ classDiagram
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kashaf12/LLD.git
+   git clone https://github.com/kashaf12/LLD-in-Typescript.git
    cd Tic-Tac-Toe
    ```
 
