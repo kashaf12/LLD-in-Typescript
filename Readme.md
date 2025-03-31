@@ -4,7 +4,7 @@ This document outlines a my progress in learning LLD with typescript.
 
 ## Project Checklists
 
-### ✅ Project 1: Tic-Tac-Toe (Completed)
+### ✅ Project 1: Tic-Tac-Toe
 
 - [x] Implement basic game board and player mechanics
 - [x] Apply Strategy pattern for winning condition checks
@@ -31,27 +31,30 @@ This document outlines a my progress in learning LLD with typescript.
   - [x] Random number generation
   - [x] Event Based Programming
 
-### Project 3: Parking Lot System
+### ✅ Project 3: Parking Lot System
 
-- [ ] **Core Functionality**
+- [x] **Core Functionality**
 
-  - [ ] Multiple parking spot types (compact, large, handicapped, etc.)
-  - [ ] Vehicle type hierarchy
-  - [ ] Ticket generation and payment processing
-  - [ ] Vacancy tracking and allocation
+  - [x] Multiple parking spot types (compact, large, handicapped, etc.)
+  - [x] Vehicle type hierarchy
+  - [x] Ticket generation and payment processing
+  - [x] Vacancy tracking and allocation
 
-- [ ] **Design Patterns to Implement**
+- [x] **Design Patterns to Implement**
 
-  - [ ] **Strategy Pattern**: For different pricing strategies
-  - [ ] **Factory Method**: For creating various vehicle and spot types
-  - [ ] **Singleton**: For parking lot instance
-  - [ ] **Command Pattern**: For parking/unparking operations
-  - [ ] **Observer**: For monitoring space availability
+  - [x] **Strategy Pattern**: For different pricing strategies
+  - [x] **Factory Method**: For creating various vehicle and spot types
+  - [x] **Singleton Pattern**: For managing system-wide components
+  - [x] **Abstract Factory Pattern**: For creating families of related objects
+  - [x] **Observer Pattern**: For updating displays when parking availability changes
+  - [x] **Command Pattern**: For encapsulating operations
 
-- [ ] **Technical Skills**
-  - [ ] Resource allocation algorithms
-  - [ ] Time-based calculations
-  - [ ] Optimization techniques
+- [x] **Technical Skills**
+  - [x] Resource allocation algorithms
+  - [x] Time-based calculations
+  - [x] Optimization techniques
+  - [x] Domain modeling
+  - [x] Building extensible software systems
 
 ### Project 4: Movie Ticket Booking System
 
@@ -237,7 +240,7 @@ This document outlines a my progress in learning LLD with typescript.
 
 - [x] Tic-Tac-Toe
 - [x] Snake & Ladder
-- [ ] Parking Lot
+- [x] Parking Lot
 - [ ] Movie Ticket Booking
 - [ ] Library Management
 - [ ] Elevator System

@@ -338,9 +338,9 @@ classDiagram
    npm run build
    ```
 
-## 🚀 Running the Game
+## 🚀 Running the Project
 
-Run the game with the following command:
+Run the project with the following command:
 
 ```bash
 npm run start
