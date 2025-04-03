@@ -9,6 +9,7 @@ export class Game {
   private players: Player[];
   private winningStrategy: WinningStrategyI;
   private currentPlayerIndex: number = 0;
+
   private static rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,

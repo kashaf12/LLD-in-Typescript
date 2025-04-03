@@ -56,28 +56,28 @@ This document outlines a my progress in learning LLD with typescript.
   - [x] Domain modeling
   - [x] Building extensible software systems
 
-### Project 4: Movie Ticket Booking System
+### ✅ Project 4: Movie Ticket Booking System
 
-- [ ] **Core Functionality**
+- [x] **Core Functionality**
 
-  - [ ] Movie, show time, and theater management
-  - [ ] Seat selection and reservation
-  - [ ] Payment processing
-  - [ ] Booking confirmation
+  - [x] Movie, show time, and theater management
+  - [x] Seat selection and reservation
+  - [x] Payment processing
+  - [x] Booking confirmation
 
-- [ ] **Design Patterns to Implement**
+- [x] **Design Patterns to Implement**
 
-  - [ ] **Facade Pattern**: For simplifying the booking interface
-  - [ ] **Proxy Pattern**: For access control to booking operations
-  - [ ] **Memento Pattern**: For saving booking state during process
-  - [ ] **Builder Pattern**: For complex booking construction
-  - [ ] **Chain of Responsibility**: For payment processing
+  - [x] **Facade Pattern**: For simplifying the booking interface
+  - [x] **Proxy Pattern**: For access control to booking operations
+  - [x] **Memento Pattern**: For saving booking state during process
+  - [x] **Builder Pattern**: For complex booking construction
+  - [x] **Chain of Responsibility**: For payment processing
 
-- [ ] **Technical Skills**
-  - [ ] Concurrency control
-  - [ ] Transaction management
-  - [ ] Timeout handling
-  - [ ] Locking mechanisms
+- [x] **Technical Skills**
+  - [x] Concurrency control
+  - [x] Transaction management
+  - [x] Timeout handling
+  - [x] Locking mechanisms
 
 ### Project 5: Library Management System
 

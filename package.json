@@ -25,9 +25,11 @@
     "start:Tic-Tac-Toe": "node ./dist/Tic-Tac-Toe/src/main.js",
     "start:Snake-Ladder": "node ./dist/Snake-Ladder/src/main.js",
     "start:Parking-Lot-System": "node ./dist/Parking-Lot-System/src/main.js",
+    "start:Movie-Ticket-Booking": "node ./dist/Movie-Ticket-Booking/src/main.js",
     "dev:Tic-Tac-Toe": "npm run build && npm run start:Tic-Tac-Toe",
     "dev:Snake-Ladder": "npm run build && npm run start:Snake-Ladder",
     "dev:Parking-Lot-System": "npm run build && npm run start:Parking-Lot-System",
+    "dev:Movie-Ticket-Booking": "npm run build && npm run start:Movie-Ticket-Booking",
     "test-watch": "jest --watchAll --detectOpenHandles"
   }
 }

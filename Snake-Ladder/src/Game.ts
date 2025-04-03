@@ -59,61 +59,6 @@ export class Game extends EventEmitter {
       (this.currentPlayerIndex + 1) % this.players.length;
   }
 
-  // public play(): void {
-  //   console.log("Game started!");
-
-  //   console.log("Players: ");
-  //   this.players.forEach((player) => {
-  //     console.log(
-  //       `Name: ${player.getName()}, Starting Position: ${player
-  //         .getCurrentTile()
-  //         .getTileNumber()}`
-  //     );
-  //   });
-  //   console.log("Board size: " + this.board.getSize());
-  //   console.log("Snakes: ");
-  //   this.board.getSnakes().forEach((value, key) => {
-  //     console.log(`From ${key.getTileNumber()} to ${value.getTileNumber()}`);
-  //   });
-  //   console.log("Ladders: ");
-  //   this.board.getLadders().forEach((value, key) => {
-  //     console.log(`From ${key.getTileNumber()} to ${value.getTileNumber()}`);
-  //   });
-  //   console.log("Game starts!");
-
-  //   while (true) {
-  //     const currentPlayer = this.getCurrentPlayer();
-  //     console.log(`${currentPlayer.getName()}'s turn!`);
-
-  //     const diceRoll = this.diceStrategy.roll();
-
-  //     console.log(`Rolled: ${diceRoll}`);
-
-  //     if (diceRoll == 0) {
-  //       console.log(`${currentPlayer.getName()} rolled a 0! Skipping turn.`);
-  //       this.nextPlayer();
-  //       continue;
-  //     }
-
-  //     console.log(
-  //       `${currentPlayer.getName()}'s current position: ${currentPlayer
-  //         .getCurrentTile()
-  //         .getTileNumber()}`
-  //     );
-
-  //     this.move(currentPlayer, diceRoll);
-
-  //     if (
-  //       currentPlayer.getCurrentTile().getTileNumber() == this.board.getSize()
-  //     ) {
-  //       console.log("Player " + currentPlayer.getName() + " wins!");
-  //       break;
-  //     }
-
-  //     this.nextPlayer();
-  //   }
-  // }
-
   public move(player: Player, steps: number): void {
     let newPosition = player.getCurrentTile().getTileNumber() + steps;
     console.log(
