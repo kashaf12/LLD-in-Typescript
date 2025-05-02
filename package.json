@@ -31,5 +31,9 @@
     "dev:Parking-Lot-System": "npm run build && npm run start:Parking-Lot-System",
     "dev:Movie-Ticket-Booking": "npm run build && npm run start:Movie-Ticket-Booking",
     "test-watch": "jest --watchAll --detectOpenHandles"
+  },
+  "dependencies": {
+    "@types/js-priority-queue": "^0.0.9",
+    "js-priority-queue": "^0.1.5"
   }
 }
